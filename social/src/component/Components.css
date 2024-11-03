@@ -1,0 +1,87 @@
+.navbar {
+    background-color: #f2f2f2;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  .navbar-brand span{
+    color: purple;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    width: 50%;
+    background-color: rgba(128, 0, 128, 0.199);
+    border-radius: 20px;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    width: 80%;
+    background-color: transparent;
+  }
+  
+  .search-bar button[type="submit"] {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  
+  .search-bar button[type="submit"]:hover {
+    background-color: #444;
+  }
+  
+  .add-post-button {
+    background-color: purple;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .add-post-button:hover {
+    background-color: rgba(128, 0, 128, 0.596);
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+  }
