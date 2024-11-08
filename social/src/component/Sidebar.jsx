@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import profile from '../assets/female.jpg'
 // import './Sidebar.css'; // Import your CSS file for styling
 
 function Sidebar() {
@@ -12,7 +13,11 @@ function Sidebar() {
   return (
     <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
       <div className="sidebar-header">
-        <img src="https://www.flaticon.com/free-icons/samvic-codes" alt="SamVic Codes Logo" />
+        <img src={profile} alt="Social Codes Logo" />
+        <div className="sidebar-header-name">
+          <h3>Nancy</h3>
+          <h5>@nancy_m</h5>
+        </div>
       </div>
       <ul className="sidebar-menu">
         <li className="sidebar-item">
