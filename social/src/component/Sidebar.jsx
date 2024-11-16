@@ -1,85 +1,102 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import profile from '../assets/female.jpg'
-// import './Sidebar.css'; // Import your CSS file for styling
+import profile from '../assets/female.jpg';
 
 function Sidebar() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState('/'); // Set the default active item
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+  // Handle click to set active item
+  const handleItemClick = (path) => {
+    setActiveItem(path);
   };
 
   return (
-    <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+    <div className="sidebar">
       <div className="sidebar-header">
-        <img src={profile} alt="Social Codes Logo" />
+        <img src={profile} alt="Profile" />
         <div className="sidebar-header-name">
           <h3>Nancy</h3>
           <h5>@nancy_m</h5>
         </div>
       </div>
       <ul className="sidebar-menu">
-        <li className="sidebar-item">
+        <li
+          className={`sidebar-item ${activeItem === '/' ? 'active' : ''}`}
+          onClick={() => handleItemClick('/')}
+        >
           <Link to="/">
-            <i className="fas fa-home"></i>
+            <i className="bx bxs-home"></i>
             <span>Home</span>
           </Link>
         </li>
-        <li className="sidebar-item">
+        <li
+          className={`sidebar-item ${activeItem === '/explore' ? 'active' : ''}`}
+          onClick={() => handleItemClick('/explore')}
+        >
           <Link to="/explore">
-            <i className="fas fa-compass"></i>
+            <i className="bx bxl-internet-explorer"></i>
             <span>Explore</span>
           </Link>
         </li>
-        <li className="sidebar-item">
+        <li
+          className={`sidebar-item ${activeItem === '/notifications' ? 'active' : ''}`}
+          onClick={() => handleItemClick('/notifications')}
+        >
           <Link to="/notifications">
-            <i className="fas fa-bell"></i>
+            <i className="bx bxs-bell"></i>
             <span>Notifications</span>
           </Link>
         </li>
-        <li className="sidebar-item">
+        <li
+          className={`sidebar-item ${activeItem === '/messages' ? 'active' : ''}`}
+          onClick={() => handleItemClick('/messages')}
+        >
           <Link to="/messages">
-            <i className="fas fa-envelope"></i>
+            <i className="bx bxs-envelope"></i>
             <span>Messages</span>
           </Link>
         </li>
-        <li className="sidebar-item">
+        <li
+          className={`sidebar-item ${activeItem === '/bookmarks' ? 'active' : ''}`}
+          onClick={() => handleItemClick('/bookmarks')}
+        >
           <Link to="/bookmarks">
-            <i className="fas fa-bookmark"></i>
+            <i className="bx bx-bookmark"></i>
             <span>Bookmarks</span>
           </Link>
         </li>
-        <li className="sidebar-item">
+        <li
+          className={`sidebar-item ${activeItem === '/analytics' ? 'active' : ''}`}
+          onClick={() => handleItemClick('/analytics')}
+        >
           <Link to="/analytics">
-            <i className="fas fa-chart-bar"></i>
+            <i className="bx bx-line-chart"></i>
             <span>Analytics</span>
           </Link>
         </li>
-        <li className="sidebar-item">
+        <li
+          className={`sidebar-item ${activeItem === '/theme' ? 'active' : ''}`}
+          onClick={() => handleItemClick('/theme')}
+        >
           <Link to="/theme">
-            <i className="fas fa-palette"></i>
+            <i className="bx bxs-palette"></i>
             <span>Theme</span>
           </Link>
         </li>
-        <li className="sidebar-item">
+        <li
+          className={`sidebar-item ${activeItem === '/settings' ? 'active' : ''}`}
+          onClick={() => handleItemClick('/settings')}
+        >
           <Link to="/settings">
-            <i className="fas fa-cog"></i>
+            <i className="bx bx-cog"></i>
             <span>Settings</span>
           </Link>
         </li>
       </ul>
-      <div className="main-content">
-        <header className="header">
-          <button className="toggle-sidebar-btn" onClick={toggleSidebar}>
-            <i className="fas fa-bars"></i>
-          </button>
-          <h1>SamVic Codes</h1>
-        </header>
-        <main className="main">
-          <h2>Welcome to SamVic Codes!</h2>
-          <p>This is a sample website built with React.</p>
-        </main>
+      <div className="create-post">
+        <Link to="/create-post">
+          <button>Create Post</button>
+        </Link>
       </div>
     </div>
   );
