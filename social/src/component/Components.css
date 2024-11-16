@@ -90,3 +90,107 @@
     border-radius: 50%;
     margin-left: 20px;
   }
+
+  /*Messages */
+.messages{
+  width: 250px;
+  position: absolute;
+  right: 100px;
+  background-color: white;
+  top: 0;
+  margin-top: 85px;
+  border-radius: 10px;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tab {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  color: black;
+  font-weight: 600;
+  border-radius: 0px;
+  border-bottom: 3px solid #33333354;
+  padding: 10px 0px;
+  margin-top: 10px;
+
+}
+
+.tab.active {
+  border-bottom: 3px solid black;
+}
+
+.message-list {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.message-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.message-content {
+  flex: 1;
+}
+
+.message-content h4 {
+  margin: 0 0 5px;
+}
+
+.message-content p {
+  margin: 0;
+  color: #777;
+}
+/* Style for the profile picture container */
+.profile-pic-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Profile picture style */
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Green dot at the bottom-right corner */
+.green-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+  border: 2px solid white; /* Optional, to make the dot stand out more */
+}
+
+/* Bold text for unread messages */
+.message-content p {
+  font-weight: normal;  /* Default is normal */
+}
+
+.message-content p[style*="font-weight: bold"] {
+  font-weight: bold;  /* Apply bold if unread */
+}
+

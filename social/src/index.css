@@ -236,7 +236,7 @@ button{
   background-color: white;
   margin-top: 85px;
   border-radius: 10px;
-  width: 600px;
+  width: 550px;
   display: flex;
   flex-direction: column;
 }
