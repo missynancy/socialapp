@@ -45,12 +45,14 @@ body{
 }
 
 .sidebar-header img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin-right: 15px;
   border-radius: 50%;
 }
-
+.sidebar-header-name{
+  margin-left: 10%;
+}
 .sidebar-header-name h3{
   font-weight: 600;
 }
@@ -224,3 +226,145 @@ button{
   max-width: 100%;
   border-radius: 8px;
 }
+/* Home */
+.app {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  position: absolute;
+  left: 340px;
+  top: 0;
+  background-color: white;
+  margin-top: 85px;
+  border-radius: 10px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stories {
+  display: flex;
+  margin-bottom: 20px;
+  height: 150px;
+}
+
+.story {
+  margin-right: 10px;
+  text-align: center;
+  position: relative;
+  width: 100px;
+  height: 150px;
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #e0c1e0, #800080);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.story img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.create-story {
+  text-align: center;
+  padding: 10px;
+  border: 1px dashed #ccc;
+  cursor: pointer;
+  height: 130px;
+}
+
+.create-story button {
+  font-size: 24px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.create-story p {
+  font-size: 12px;
+}
+
+.post-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  position: relative;
+}
+.post-input-content{
+  width: 94%;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+.post-input img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  
+}
+.post-input input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 70%;
+}
+.post-input input:focus{
+  border: none;
+}
+.post-input input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.post-input button {
+  width: 15%;
+  border: none;
+  border-radius: 20px;
+}
+
+.post-input button:hover {
+  border: none;
+}
+.post-image-upload{
+  margin-top: 20px;
+  position: absolute;
+  left: 30%;
+  top: 50px;
+}
+.post {
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-content {
+  margin-top: 10px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.post-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
