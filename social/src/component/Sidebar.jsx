@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import profile from '../assets/female.jpg';
+import profile from '/stories/p9.jpg';
 
 function Sidebar() {
   const [activeItem, setActiveItem] = useState('/'); // Set the default active item

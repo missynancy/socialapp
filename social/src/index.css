@@ -22,7 +22,7 @@ body{
   color: black;
   padding: 20px;
   transition: width 0.5s;
-  position: relative;
+  position: fixed;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -50px;
+  margin-top: -60px;
 }
 .sidebar-menu li{
   padding: 15px 10px;
@@ -147,6 +147,10 @@ button{
   width: 80%;
   padding: 5px 0;
   border-radius: 10px;
+  border: none;
+}
+button:hover{
+  background-color: rgba(128, 0, 128, 0.596);
 }
 .create-post{
   width: 100%;
@@ -163,6 +167,8 @@ button{
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  height: auto;
+  overflow-y: auto;
 }
 
 .modal-content {
@@ -239,6 +245,7 @@ button{
   width: 550px;
   display: flex;
   flex-direction: column;
+  height: auto;
 }
 
 .stories {
@@ -368,3 +375,280 @@ button{
   font-size: 14px;
 }
 
+/* content */
+/* General Post Styling */
+.content {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.content:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Post Header Styling */
+.content-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.content-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.content-header p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Post Content Styling */
+.content-content {
+  margin: 10px 0;
+}
+
+.content-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.content-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+  object-fit: cover;
+}
+
+/* Post Footer Styling */
+.content-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.content-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.content-footer strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.content-footer .likes,
+.content-footer .comments {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.content-footer .likes i,
+.content-footer .comments i {
+  font-size: 16px;
+  color: #888;
+}
+
+/* Hover effect for post header */
+.content-header h4:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.like-btn, .comment-btn {
+  background-color: transparent;
+  margin: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #333;
+  border: none;
+}
+.like-btn.liked {
+  background-color: purple;
+  color: white;
+}
+
+.comment-btn {
+  background-color: #fff;
+}
+/* Comment Section */
+.comment-section {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.comment-user-image{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.comment-header-profile{
+  display: flex;
+  align-items: center;
+}
+.comment .comment-like-button{
+  display: flex;
+  align-items: center;
+  width: 20%;
+  font-size: 16px;
+  justify-content: center;
+}
+.comment .like-btn{
+  color: white;
+}
+.comment-section .comments-list {
+  margin-bottom: 15px;
+}
+
+.comment-section .comment {
+  background-color: #e0e0e0;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.comment-section .comment-input textarea {
+  width: 95%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.comment-buttons{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-section .comment-input button{
+  width: 30%;
+  position: absolute;
+  bottom: 5px;
+  right: 40%;
+}
+
+/* Close Button */
+.close-comments {
+  background-color: transparent;
+  border: none;
+  color: #666;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  width: 10%;
+  right: 10px;
+}
+
+/* Styling the Reply Section */
+.reply-section {
+  margin-top: 15px;
+  padding-left: 40px; /* Indentation for replies */
+  border-left: 2px solid #ddd; /* Visual indication of replies */
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reply-input{
+  width: 98%;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reply-section textarea {
+  width: 95%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 14px;
+  min-height: 40px;
+}
+
+.reply-section button {
+  border: none;
+}
+
+
+
+/* Styling the replies list */
+.replies-list {
+  margin-top: 15px;
+  padding-left: 10px; /* Additional indent for replies */
+  background-color: white;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.reply {
+  margin-bottom: 10px;
+}
+
+.reply-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.reply-user-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.reply-header h6 {
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+}
+
+.reply p {
+  margin: 5px 10px 0px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Add a subtle hover effect on the replies */
+.reply:hover {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* Add a subtle hover effect on the reply button */
+.reply-section button:hover {
+  background-color: #0056b3;
+}

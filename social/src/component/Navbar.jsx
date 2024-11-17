@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
-import profile from '../assets/female.jpg'
+import profile from '/stories/p9.jpg'
 import Messages from './Messages';
 import './Components.css';
 

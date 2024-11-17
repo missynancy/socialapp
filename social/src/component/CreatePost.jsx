@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const CreatePost = () => {
+const CreatePost = ({ addPost }) => {
   const navigate = useNavigate();
   
   const [selectedOption, setSelectedOption] = useState(null);
@@ -39,6 +38,16 @@ const CreatePost = () => {
   // Handle submission of post (video or image)
   const handleSubmitPost = () => {
     if (file && description) {
+      const newPost = {
+        user: { name: 'Nancy', image: '/stories/p9.jpg' },  // Example user info
+        location: 'London',
+        time: 'Just now',
+        content: { text: description, image: URL.createObjectURL(file) }
+      };
+
+      // Call addPost to update the posts in the parent component
+      addPost(newPost);
+
       alert(`${selectedOption} uploaded with description: ${description}`);
       navigate('/'); // Redirect back to the home page
     } else {
